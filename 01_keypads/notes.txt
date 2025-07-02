@@ -1,0 +1,38 @@
+This demonstration is using STM32F446RE NUCLEO Board
+ROW is input, external pull-up resistor
+COL is output, no push-pull
+
+Works
+When key is pressed, character will be sent to serial monitor
+(using VS Code serial monitor is fastest)
+
+Schematics
+
+                 Nucleo board
+        +---------------------------+
+   VCC  | VCC                    D9 | --> ROW1
+   GND  | GND                    D8 | --> ROW2
+        |                        D7 | --> COL1
+        |                        D6 | --> COL2
+        |                        D5 | --> COL3
+        |                        D4 | --> COL4
+        |                        D3 | --> COL5
+        +---------------------------+
+
+                 Push Button Matrix
+                 (2 Rows × 5 Cols)
+
+         +-----+-----+-----+-----+-----+
+  ROW1 → |  x  |  x  |  x  |  x  |  x  |
+         +-----+-----+-----+-----+-----+
+  ROW2 → |  x  |  x  |  x  |  x  |  x  |
+         +-----+-----+-----+-----+-----+
+            ↑     ↑     ↑     ↑     ↑
+          COL1  COL2  COL3  COL4  COL5
+
+ Push button(left):
+ VCC ---[10k pull-up]--- ROWx input
+                           |
+                        [100nF]
+                           |
+                          GND
