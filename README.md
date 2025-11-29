@@ -1,6 +1,7 @@
 # STM32 Projects
 - 00_led_blink
 - 01_keypads
+- 02_bootloader
 
 ## Keywords
 ![C](https://img.shields.io/badge/Language-C-00599C?style=plastic)
